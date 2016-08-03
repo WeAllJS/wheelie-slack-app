@@ -1,0 +1,21 @@
+{
+  "name": "wheelie-slack-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kat Marchán <kzm@sykosomatic.org>",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "node-fetch": "^1.5.3",
+    "querystring": "^0.2.0",
+    "redis": "^2.6.2",
+    "restify": "^4.1.1"
+  },
+  "engines": {
+    "node": "5.9.1"
+  }
+}
