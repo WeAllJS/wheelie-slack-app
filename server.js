@@ -3,6 +3,9 @@ const button = require('./lib/button')
 const admin = require('./lib/admin')
 const event = require('./lib/event')
 const oauth = require('./lib/oauth')
+const bot = require('./lib/bot')
+
+bot.listen()
 
 const server = restify.createServer()
 
