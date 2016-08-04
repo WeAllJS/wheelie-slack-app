@@ -10,10 +10,12 @@
   "author": "Kat Marchán <kzm@sykosomatic.org>",
   "license": "CC0-1.0",
   "dependencies": {
+    "bluebird": "^3.4.1",
     "node-fetch": "^1.5.3",
     "querystring": "^0.2.0",
     "redis": "^2.6.2",
-    "restify": "^4.1.1"
+    "restify": "^4.1.1",
+    "slack": "^7.7.0"
   },
   "engines": {
     "node": "5.9.1"
