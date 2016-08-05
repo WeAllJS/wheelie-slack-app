@@ -1,6 +1,7 @@
 const restify = require('restify')
 const button = require('./lib/button')
 const admin = require('./lib/admin')
+const signup = require('./lib/signup')
 const event = require('./lib/event')
 const oauth = require('./lib/oauth')
 const bot = require('./lib/bot')
@@ -36,6 +37,7 @@ server.get('/install', function (req, res, next) {
 })
 server.post('/button', button)
 server.post('/admin', admin)
+server.post('/signup', signup)
 server.post('/event', event)
 server.get('/oauth', oauth)
 
