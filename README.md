@@ -7,6 +7,9 @@ slack statistics, and channel management.
 
 ## Getting up and running
 
+Once you've created your Slack, before installing anything, make sure you have
+two private channels: `admin` and `admin-signups`
+
 Wheelie is a heroku app, so get that set up.
 
 Once you've got that set up, you'll need to visit the OAuth section of the apps
@@ -28,3 +31,6 @@ https://<appname>.herokuapp.com/admin
 Then, run `heroku config:set APP_URL=https://<appname>.herokuapp.com`
 
 Finally, add the Rediscloud addong: `heroku addons:create rediscloud:30`
+
+Once the app is up and running: Invite @wheelie-bot to the `#admin` and
+`#admin-signups` private channels, and you're good to go!
