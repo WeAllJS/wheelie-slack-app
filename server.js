@@ -5,6 +5,7 @@ const signup = require('./lib/signup')
 const event = require('./lib/event')
 const oauth = require('./lib/oauth')
 const bot = require('./lib/bot')
+const installInviter = require('./lib/install-inviter')
 
 const server = restify.createServer()
 
@@ -32,6 +33,7 @@ server.post('/admin', admin)
 server.post('/signup', signup)
 server.post('/event', event)
 server.get('/oauth', oauth)
+server.get('/install-inviter', installInviter)
 
 bot.listen()
 server.listen(process.env.PORT)
