@@ -10,8 +10,9 @@ slack statistics, and channel management.
 Wheelie is a heroku app, so get that set up.
 
 Once you've got that set up, you'll need to visit the OAuth section of the apps
-site and get (and set) `SLACK_CLIENT_ID`, `SLACK_CLIENT_SECRET` and
-`VERIFICATION_TOKEN` from the corresponding fields.
+site and get (and set in the environment) `SLACK_CLIENT_ID`,
+`SLACK_CLIENT_SECRET` and `VERIFICATION_TOKEN` from the corresponding fields.
+That is, `heroku config:set SLACK_CLIENT_ID=...client id...`
 
 Next, you should add the app's redirect uri to the redirect field on that page.
 The URI is: https://<appname>.herokuapp.com/oauth
@@ -24,4 +25,6 @@ as the Request URL
 Next, go to Slash Commands and create a command called `/admin` that points to
 https://<appname>.herokuapp.com/admin
 
-Finally, add the Rediscloud addong: `heroku addons:create rediscloud:30 `
+Then, run `heroku config:set APP_URL=https://<appname>.herokuapp.com`
+
+Finally, add the Rediscloud addong: `heroku addons:create rediscloud:30`
