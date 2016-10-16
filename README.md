@@ -30,7 +30,7 @@ https://<appname>.herokuapp.com/admin
 
 Then, run `heroku config:set APP_URL=https://<appname>.herokuapp.com`
 
-Finally, add the Rediscloud addong: `heroku addons:create rediscloud:30`
+Finally, add the Rediscloud addon: `heroku addons:create rediscloud:30`
 
 Once the app is up and running: Invite @wheelie-bot to the `#admin` and
 `#admin-signups` private channels, and you're good to go!
