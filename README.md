@@ -7,32 +7,61 @@ slack statistics, and channel management.
 
 ## Getting up and running
 
-Once you've created your Slack, before installing anything, make sure you have
-two private channels: `admin` and `admin-signups`
-
 Wheelie is a heroku app, so get that set up.
 
-Once you've got that set up, you'll need to visit the OAuth section of the apps
-site and get (and set in the environment) `SLACK_CLIENT_ID`,
-`SLACK_CLIENT_SECRET` and `VERIFICATION_TOKEN` from the corresponding fields.
-That is, `heroku config:set SLACK_CLIENT_ID=...client id...`
+Also, add the redis addon: `heroku addons:create rediscloud:30`
+
+### Config
+
+Go to the various pages in the Slack App configuration section, and set up
+Wheelie with the following:
+
+#### Basic Information
+
+In the Basic Information section of your slack app, get (and set in the
+environment) `SLACK_CLIENT_ID`, `SLACK_CLIENT_SECRET` and `VERIFICATION_TOKEN`
+from the corresponding fields. That is, `heroku config:set
+SLACK_CLIENT_ID=...client id...`
+
+Then, run `heroku config:set APP_URL=https://<appname>.herokuapp.com`
+
+#### OAuth and Permissions
 
 Next, you should add the app's redirect uri to the redirect field on that page.
 The URI is: https://<appname>.herokuapp.com/oauth
 
-Next, add a Bot User with whatever name you want for it.
+#### Bot Users
+
+Pick a valid name for your bot. Anything is fine.
+
+#### Interactive Messages
 
 Next, go to Interactive Messages and set https://<appname>.herokuapp.com/button
-as the Request URL
+as the Request URL.
 
-Next, go to Slash Commands and create a command called `/admin` that points to
-https://<appname>.herokuapp.com/admin
+#### Slack Commands
 
-Then, run `heroku config:set APP_URL=https://<appname>.herokuapp.com`
+In the Slack Commands section, set up all the Wheelie commands as follows, using
+https://<appname>.herokuapp.com/command as the Request URL for all of them (the
+same endpoint is shared across all commands).
 
-You can optionally add a URL to your Code of Conduct, which will be used in some of the app's messaging, with `heroku config:set COC_URL=https://foococ.url`
+* `/admin <message for admins>  Notifies the admin channel.`
+* `/help? <nothing> Displays bot help.`
+* `/join-private <channel> Join a private channel.`
+* `/list-private [filter] List private channels.`
 
-Finally, add the Rediscloud addon: `heroku addons:create rediscloud:30`
+### Other setup steps
 
-Once the app is up and running: Invite @wheelie-bot to the `#admin` and
-`#admin-signups` private channels, and you're good to go!
+#### Channels
+
+Create two private channels: `#admin` and `#admin-signups` and invite your bot
+into both of those. `#admin` is where `/admin` commands will go.
+`#admin-signups` is where web signups requests will go.
+
+#### Dedicated Invite User
+
+* Create a new slack user with the name and email you want Slack invites to be
+  sent with (for example, `MyCommunity Inviter <inviter@mycommunity.org`).
+* Grant the user admin privileges
+* Log in with the user on your browser (by visiting <yourslack>.slack.com)
+* Visit https://<appname>.herokuapp.com/install-inviter?team=<team_id> -- the URL will be displayed the first time you try to accept a user anyway.
