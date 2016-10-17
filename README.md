@@ -30,6 +30,8 @@ https://<appname>.herokuapp.com/admin
 
 Then, run `heroku config:set APP_URL=https://<appname>.herokuapp.com`
 
+You can optionally add a URL to your Code of Conduct, which will be used in some of the app's messaging, with `heroku config:set COC_URL=https://foococ.url`
+
 Finally, add the Rediscloud addon: `heroku addons:create rediscloud:30`
 
 Once the app is up and running: Invite @wheelie-bot to the `#admin` and
