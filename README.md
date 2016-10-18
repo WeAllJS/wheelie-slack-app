@@ -1,9 +1,9 @@
 # Wheelie
 
-Wheelie is a [Slack App](slack.com/apps) originally written for
-[WeAllJS](wealljs.org). It takes care of various bits that a given slack might
-need, such as an `/admin` command, a signup request handler with request review,
-slack statistics, and channel management.
+Wheelie is a [Slack App](http://slack.com/apps) originally written for
+[WeAllJS](http://wealljs.org). It takes care of various bits that a given slack
+might need, such as an `/admin` command, a signup request handler with request
+review, slack statistics, and channel management.
 
 ## Getting up and running
 
