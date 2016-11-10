@@ -17,7 +17,7 @@
     "redis": "^2.6.2",
     "restify": "^4.1.1",
     "slack": "^7.7.0",
-    "yargs": "^6.2.0-candidate"
+    "yargs": "^6.3.0"
   },
   "engines": {
     "node": "5.9.1"
