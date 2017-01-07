@@ -65,3 +65,11 @@ into both of those. `#admin` is where `/admin` commands will go.
 * Grant the user admin privileges
 * Log in with the user on your browser (by visiting <yourslack>.slack.com)
 * Visit https://<appname>.herokuapp.com/install-inviter?team=<team_id> -- the URL will be displayed the first time you try to accept a user anyway.
+
+### Welcome message to new users
+
+The `WELCOME_MESSAGE_TEXT` config var controls what message is sent to the new users when they join. By default it says:
+`Welcome! Review the ${cocTxt} before participating in the community.`
+
+To disable the welcome message, set the config var `SEND_WELCOME_MESSAGE` to `FALSE`.
+
