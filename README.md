@@ -7,19 +7,18 @@ review, slack statistics, and channel management.
 
 ## Getting up and running
 
-Wheelie is a heroku app, so get that set up.
+Wheelie is a heroku app, so let's get that set up. A straightforward way is to clone this repo and go through the steps of adding a [heroku remote](https://devcenter.heroku.com/articles/git#creating-a-heroku-remote) and deploying to it.
 
 Also, add the redis addon: `heroku addons:create rediscloud:30`
 
 ### Config
 
-Go to the various pages in the Slack App configuration section, and set up
-Wheelie with the following:
+Wheelie is also a slack app! Go to `https://<your slack>.slack.com/apps/build`, "Get Started with Slack Apps", then "Build an App". You're in the Slack App configuration section, let's set up Wheelie with the following:
 
 #### Basic Information
 
 In the Basic Information section of your slack app, get (and set in the
-environment) `SLACK_CLIENT_ID`, `SLACK_CLIENT_SECRET` and `VERIFICATION_TOKEN`
+environment) `SLACK_CLIENT_ID`, `SLACK_CLIENT_SECRET` and `VERIFICATION_TOKEN` (available after enabling Interactive Messages)
 from the corresponding fields. That is, `heroku config:set
 SLACK_CLIENT_ID=...client id...`
 
@@ -51,6 +50,8 @@ same endpoint is shared across all commands).
 * `/list-private [filter] List private channels.`
 
 ### Other setup steps
+
+Visit `https://<appname>.herokuapp.com/install` and click the "Add to Slack" button.
 
 #### Channels
 
