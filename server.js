@@ -15,8 +15,7 @@ const server = restify.createServer()
 const scopes = [
   'incoming-webhook',
   'commands',
-  'bot',
-  'chat:write:user'
+  'bot'
 ]
 
 server.use(restify.bodyParser())
