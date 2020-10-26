@@ -26,7 +26,7 @@ Then, run `heroku config:set APP_URL=https://<appname>.herokuapp.com`
 
 #### OAuth and Permissions
 
-Next, you should add the app's redirect uri to the redirect field on that page.
+Next, you should add the app's redirect uri to the redirect field on the Oauth & Permissions page in Slack's App Builder site.
 The URI is: `https://<appname>.herokuapp.com/oauth`
 
 #### Bot Users
@@ -35,7 +35,7 @@ Pick a valid name for your bot. Anything is fine.
 
 #### Interactive Messages
 
-Next, go to Interactive Messages and set `https://<appname>.herokuapp.com/button`
+Next, go to Interactivity & Shortcuts and set `https://<appname>.herokuapp.com/button`
 as the Request URL.
 
 #### Slack Commands
