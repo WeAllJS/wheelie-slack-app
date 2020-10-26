@@ -38,9 +38,9 @@ Pick a valid name for your bot. Anything is fine.
 Next, go to Interactivity & Shortcuts and set `https://<appname>.herokuapp.com/button`
 as the Request URL.
 
-#### Slack Commands
+#### Slash Commands
 
-In the Slack Commands section, set up all the Wheelie commands as follows, using
+In the Slash Commands section, set up all the Wheelie commands as follows, using
 `https://<appname>.herokuapp.com/command` as the Request URL for all of them (the
 same endpoint is shared across all commands).
 
