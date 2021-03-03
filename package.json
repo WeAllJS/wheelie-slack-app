@@ -16,7 +16,7 @@
     "querystring": "^0.2.0",
     "redis": "^2.6.3",
     "restify": "^4.2.0",
-    "slack": "^7.7.0",
+    "slack": "^8.4.2",
     "yargs": "^6.3.0"
   },
   "engines": {
