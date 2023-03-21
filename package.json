@@ -10,7 +10,7 @@
   "author": "Kat Marchán <kzm@sykosomatic.org>",
   "license": "CC0-1.0",
   "dependencies": {
-    "@inklesspen/genderrolls": "^1.0.2",
+    "@inklesspen/genderrolls": "file:vendor/genderrolls-1.0.2",
     "bluebird": "^3.4.1",
     "node-fetch": "^1.5.3",
     "querystring": "^0.2.0",
