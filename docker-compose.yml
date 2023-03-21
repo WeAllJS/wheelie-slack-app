@@ -1,0 +1,19 @@
+version: "3.9"
+volumes:
+  redis: {}
+
+services:
+  web:
+    build: .
+    ports:
+      - 8000:8000
+    environment:
+      PORT: 8000
+      REDISCLOUD_URL: "//redis:6379"
+      APP_URL: "http://localhost:8000"
+  redis:
+    image: redis
+    expose:
+      - 6379
+    volumes:
+      - redis:/data:rw
