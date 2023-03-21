@@ -8,6 +8,7 @@ const event = require('./lib/res/event')
 const oauth = require('./lib/res/oauth')
 const installInviter = require('./lib/res/install-inviter')
 
+console.log(`invoking bot.listen()...`)
 require('./lib/bot').listen()
 
 const server = restify.createServer()
@@ -31,4 +32,5 @@ const resources = [
 ]
 resources.map(r => r(server))
 
+console.log(`finished configuring routes; starting listen on port ${process.env.PORT}`)
 server.listen(process.env.PORT)
