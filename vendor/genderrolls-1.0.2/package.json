@@ -9,9 +9,9 @@
     "url": ""
   },
   "files": [
-    "dist"
+    "lib"
   ],
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "keywords": [
     ""
   ],
