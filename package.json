@@ -13,7 +13,7 @@
     "bluebird": "^3.4.1",
     "node-fetch": "^1.5.3",
     "querystring": "^0.2.0",
-    "redis": "^2.6.3",
+    "redis": "^3.1.1",
     "restify": "^4.2.0",
     "slack": "^8.4.2",
     "yargs": "^6.3.0"
